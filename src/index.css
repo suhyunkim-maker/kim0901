@@ -1,0 +1,40 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #5271FF;
+  --color-secondary: #E9EFFF;
+  --color-accent: #FF8AB4;
+  --color-ink: #1E293B;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 2.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F0F4FF] text-ink antialiased;
+  }
+}
+
+@layer components {
+  .cute-card {
+    @apply bg-white rounded-3xl border-4 border-white shadow-[0_8px_0_0_rgba(82,113,255,0.05)];
+  }
+}
+
+.markdown-body {
+  @apply text-[15px] leading-relaxed text-slate-700 font-sans;
+}
+
+.markdown-body h1 { @apply text-4xl font-black my-10 text-primary leading-tight; }
+.markdown-body h2 { @apply text-2xl font-bold mt-12 mb-6 text-slate-800 flex items-center gap-2; }
+.markdown-body h3 { @apply text-xl font-bold mt-10 mb-5 text-slate-800 border-l-4 border-primary pl-4; }
+.markdown-body p { @apply my-6 leading-loose; }
+.markdown-body ul { @apply list-disc list-inside my-4 space-y-3; }
+.markdown-body blockquote { @apply border-l-8 border-primary/20 pl-6 py-3 italic my-8 text-slate-500 bg-secondary/30 rounded-r-2xl; }
+
